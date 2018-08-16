@@ -237,10 +237,10 @@ class State(object):
         return math.degrees(radians)
 
     def set_recording_callback(self, method):
-        self.__recording_callback = types.MethodType(method, self)
+        self.__recording_callback = method
 
     def set_idle_callback(self, method):
-        self.__idle_callback = types.MethodType(method, self, State)
+        self.__idle_callback = method
 
     def set_save_recording_callback(self, method):
-        self.__save_recording_callback = types.MethodType(method, self)
+        self.__save_recording_callback = method
