@@ -1,0 +1,5 @@
+fastdtw
+#gaugette.ssd1306
+numpy
+scipy
+socketIO_client
