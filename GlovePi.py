@@ -3,7 +3,7 @@ import os.path
 import time
 import uuid
 
-import gaugette.ssd1306
+#import gaugette.ssd1306
 import numpy as np
 import scipy.interpolate as interp
 from fastdtw import fastdtw
@@ -46,10 +46,10 @@ class GlovePi:
             self.all_uuids = []
             self.all_times = []
 
-        self.led = gaugette.ssd1306.SSD1306(reset_pin=reset_pin_id,
-                                            dc_pin=dc_pin_id)
-        self.led.begin()
-        self.led.clear_display()
+        #self.led = gaugette.ssd1306.SSD1306(reset_pin=reset_pin_id, 
+        #                                    dc_pin=dc_pin_id)
+        #self.led.begin()
+        #self.led.clear_display()
 
         # Where the buttons are plugged into the pi.
         self.button_1_pin = 5  # Red.
@@ -296,9 +296,9 @@ class GlovePi:
         """
         print "short red"
         if self.current_label in self.all_labels:
-            self.led.clear_display()
-            self.led.draw_text2(0, 0, 'label' + str(self.current_label + 1), 2)
-            self.led.display()
+            #self.led.clear_display()
+            #self.led.draw_text2(0, 0, 'label' + str(self.current_label + 1), 2)
+            #self.led.display()
             print "Incremented", (self.current_label + 1)
             self.current_label += 1
 
@@ -314,9 +314,9 @@ class GlovePi:
         string_red = 'Record' if record_mode else (
                 'Classify' + str(self.current_label))
 
-        self.led.clear_display()
-        self.led.draw_text2(0, 0, string_red, 2)
-        self.led.display()
+        #self.led.clear_display()
+        #self.led.draw_text2(0, 0, string_red, 2)
+        #self.led.display()
 
         if record_mode is False:
             self.generate_model()

@@ -14,8 +14,8 @@ def main():
     pi = GlovePi.GlovePi()
 
     text = 'BrightSign'
-    pi.led.draw_text2(0, 0, text, 2)
-    pi.led.display()
+    #pi.led.draw_text2(0, 0, text, 2)
+    #pi.led.display()
 
     # Provide the appropriate callbacks to the state
     # object so it calls them for us.
